@@ -1,11 +1,16 @@
 CACHE MANIFEST
-# Version 0.6799999
+# Version 0.679999000
 
 index.html
 css/base.css
+css/headers.css
+css/buttons.css
+css/toolbars.css
+
 js/base.js
 js/webapp.js
 js/offline.js
+js/hammer.min.js
 
 NETWORK:
 *
