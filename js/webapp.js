@@ -226,7 +226,7 @@
                     "portrait-primary"
                     "portrait-secondary" 
             */
-            var portraitLock = screen.mozLockOrientation("portrait");
+            var portraitLock = screen.mozLockOrientation ? screen.mozLockOrientation("portrait") : null;
             if (portraitLock) {
                 alert("Orientation locked to portrait");
             }

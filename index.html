@@ -42,7 +42,9 @@
     <script type="text/javascript" src="js/offline.js"></script>
 
    <script>
-   screen.mozLockOrientation("portrait");
+   if(screen.mozLockOrientation) {
+        screen.mozLockOrientation("portrait");
+   }
     var main = document.querySelector('#main'), 
         red = document.querySelector('.team.red'),
         blue = document.querySelector('.team.blue');

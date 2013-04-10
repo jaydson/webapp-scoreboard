@@ -12,7 +12,7 @@
     },
     "developer": {
         "name": "Jaydson Gomes",
-        "url": "http://jaydson.org/apps/scoreboard"
+        "url": "http://scoreboard.jaydson.org"
     },
     "installs_allowed_from": ["*"],
     "default_locale": "en",
