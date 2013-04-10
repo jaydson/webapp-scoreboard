@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<!-- 
+    Exchange the line above for this to enable offline support
+    <html manifest="manifest.appcache">
+
+    Please make your homework before doing this:
+        http://www.alistapart.com/articles/application-cache-is-a-douchebag/
+        http://appcachefacts.info
+    
+    This might be necessary to set up on your server, to make sure 
+    files are updated when the appcache file itself is:
+        https://github.com/robnyman/Firefox-OS-Boilerplate-App/blob/gh-pages/.htaccess
+ -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/headers.css">
+    <link rel="stylesheet" type="text/css" href="css/buttons.css">
+    <link rel="stylesheet" type="text/css" href="css/toolbars.css">
+    <title>Foosball ScoreBoard</title>
+</head>
+
+<body>
+    <button id="install">Install</button>
+    <button id="reload">Refresh</button>
+
+    <div id="main">
+        
+        <div class="team red">
+            0
+        </div>
+        <div class="team blue">
+            0
+        </div>
+    
+    </div>
+    <script type="text/javascript" src="js/hammer.min.js"></script>
+    <script type="text/javascript" src="js/base.js"></script>
+    <script type="text/javascript" src="js/webapp.js"></script>
+    <script type="text/javascript" src="js/offline.js"></script>
+
+   <script>
+   screen.mozLockOrientation("portrait");
+    var main = document.querySelector('#main'), 
+        red = document.querySelector('.team.red'),
+        blue = document.querySelector('.team.blue');
+        blueScore = 0,
+        redScore = 0;
+
+    function newGame () {
+        blueScore = 0;
+        redScore = 0;
+        red.innerHTML = redScore;
+        blue.innerHTML = blueScore;
+    }
+
+    Hammer(red).on("tap", function(event) {
+        redScore ++;
+        red.innerHTML = redScore;
+    });
+
+    Hammer(blue).on("tap", function(event) {
+        blueScore ++;
+        blue.innerHTML = blueScore;
+    });
+
+    Hammer(main).on('pinch', function(event) {
+        newGame();
+    });
+
+   </script>
+
+</body>
+</html>
