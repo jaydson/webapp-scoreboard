@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Firefox OS Boilerplate App
 
 This is a demo app for Firefox OS, loosely based on [fxosstub](https://github.com/Jaxo/fxosstub), meant to act as a simple boilerplate for getting started with apps for Firefox OS.
@@ -47,9 +46,3 @@ And:
 
 
 All options to test packaged apps are outlined in the [How to install packaged apps in Firefox OS – options and tools](https://hacks.mozilla.org/2013/03/how-to-install-packaged-apps-in-firefox-os-options-and-tools/) article
-=======
-webapp-scoreboard
-=================
-
-Webapp ScoreBoard is an app created for fossball players
->>>>>>> f2dcaa189c7a302ecaa8651a485e37fc81dca2e2
