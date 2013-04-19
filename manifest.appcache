@@ -1,11 +1,13 @@
 CACHE MANIFEST
-# Version 0.679999000
+# Version 0.8
 
 index.html
 css/base.css
 css/headers.css
 css/buttons.css
 css/toolbars.css
+mp3/caxao.ogg
+mp3/passoca.ogg
 
 js/base.js
 js/webapp.js

@@ -24,6 +24,7 @@
 </head>
 
 <body>
+    <audio id="caxao" src="mp3/caxao.ogg" type="audio/mpeg" preload="auto"></audio>
     <button id="install">Install</button>
     <button id="reload">Refresh</button>
 
@@ -48,7 +49,8 @@
    }
     var main = document.querySelector('#main'), 
         red = document.querySelector('.team.red'),
-        blue = document.querySelector('.team.blue');
+        blue = document.querySelector('.team.blue'),
+        caxao = document.querySelector('#caxao'),
         blueScore = 0,
         redScore = 0;
 
@@ -59,14 +61,24 @@
         blue.innerHTML = blueScore;
     }
 
+    function doTheCaixao() {
+        var audioel = document.createElement('audio');
+        audioel.src="mp3/caxao.ogg";
+        audioel.type="audio/mpeg";
+        audioel.preload="auto";
+        audioel.play();
+    }
+
     Hammer(red).on("tap", function(event) {
         redScore ++;
         red.innerHTML = redScore;
+        doTheCaixao();
     });
 
     Hammer(blue).on("tap", function(event) {
         blueScore ++;
         blue.innerHTML = blueScore;
+        doTheCaixao();
     });
 
     Hammer(main).on('pinch', function(event) {
